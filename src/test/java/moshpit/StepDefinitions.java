@@ -2,15 +2,17 @@ package moshpit;
 
 import io.cucumber.java.PendingException;
 import io.cucumber.java.en.*;
+import com.microsoft.playwright.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class StepDefinitions {
 
+    private String artistName = "";
+
     @Given("an artist named {string}")
-    public void anArtistNamed(String arg0) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void anArtistNamed(String givenArtistName) {
+        artistName = givenArtistName;
     }
 
     @Given("I am on the artist page")
