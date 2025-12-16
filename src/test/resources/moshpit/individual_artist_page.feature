@@ -1,12 +1,13 @@
 Feature: Individual artist page
 
   Background:
-    Given an artist named "Hayley Williams"
+    Given an artist named "HayleyWilliams"
 
   Scenario: Looking at the top of the page
     Given I am on the artist page
     When I scroll to the top of the page
     Then the artist name, bio and genre is visible
+    And the artist name is in the page title
 
   Scenario: Creating a new post on an empty feed
     Given I am on the artist page

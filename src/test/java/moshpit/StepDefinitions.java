@@ -2,29 +2,39 @@ package moshpit;
 
 import io.cucumber.java.PendingException;
 import io.cucumber.java.en.*;
-import com.microsoft.playwright.*;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.junit.jupiter.api.*;
+import org.openqa.selenium.interactions.Actions;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import javax.swing.*;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class StepDefinitions {
 
-    private String artistName = "";
+    private String artistName;
+    private WebDriver driver;
+    private String path;
 
     @Given("an artist named {string}")
     public void anArtistNamed(String givenArtistName) {
         artistName = givenArtistName;
+        driver = new ChromeDriver();
+        String root = "http://127.0.0.1:5001";
+        path = root + "/" + artistName;
     }
 
     @Given("I am on the artist page")
     public void iAmOnTheArtistPage() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        driver.get(path);
     }
 
     @When("I scroll to the top of the page")
     public void iScrollToTheTopOfThePage() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        new Actions(driver).scrollByAmount(0, -10000).perform();
     }
 
     @Then("the artist name, bio and genre is visible")
@@ -91,5 +101,10 @@ public class StepDefinitions {
     public void theCharacterCountShouldBeDisplayed() {
         // Write code here that turns the phrase above into concrete actions
         throw new PendingException();
+    }
+
+    @And("the artist name is in the page title")
+    public void theArtistNameIsInThePageTitle() {
+        assertTrue(driver.getTitle().contains(artistName));
     }
 }
