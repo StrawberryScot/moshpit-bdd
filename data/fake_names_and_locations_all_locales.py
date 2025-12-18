@@ -16,7 +16,6 @@ locales = [
     "it_IT",
     "ja_JP",
     "ko_KR",
-    "lt_LT",
     "lv_LV",
     "ne_NP",
     "nl_NL",
