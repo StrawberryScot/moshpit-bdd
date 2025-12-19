@@ -16,7 +16,6 @@ locales = [
     "it_IT",
     "ja_JP",
     "ko_KR",
-    "lv_LV",
     "ne_NP",
     "nl_NL",
     "no_NO",
@@ -50,7 +49,6 @@ locale_to_native_country = {
     "it_IT": "Italia",             # Italy
     "ja_JP": "日本",               # Japan
     "ko_KR": "대한민국",            # South Korea
-    "lv_LV": "Latvija",            # Latvia
     "ne_NP": "नेपाल",              # Nepal
     "nl_NL": "Nederland",          # Netherlands
     "no_NO": "Norge",              # Norway
@@ -68,9 +66,6 @@ locale_to_native_country = {
 
 users = []
 
-with open("./names_and_cities.csv", "w") as f:
-    f.write("")
-
 Faker.seed(12345)
 for locale in locales:
     fake = Faker(locale)
@@ -85,9 +80,9 @@ for locale in locales:
         print(city)
         print(country)
         print("")
+
 with open("./names_cities_countries.csv", "a") as f:
     for user in users:
         print(user)
         line = f"{user['name']}, {user['city']}, {user['country']}\n"
         f.write(line)
-
