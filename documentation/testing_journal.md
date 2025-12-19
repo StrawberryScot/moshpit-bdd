@@ -1,5 +1,6 @@
 # Kathy Peacock & Benjamin Loveday Final Project TESTING JOURNAL
 
+## WEEK 1
 
 ## DAY 1 
 
@@ -56,15 +57,40 @@ scripts and languages with a formatted csv. We also found a fun bug within the F
 
 ### Test Data Generation Issue
 
-**Issue Found:** Faker's lt_LT (Lithuanian) locale generates names with commas in format "Surname, Firstname" which is not a valid Lithuanian naming convention and had consequences for our generated csv!
+    - **Issue Found:** Faker's lt_LT (Lithuanian) locale generates names with commas in format "Surname, Firstname" which is not a valid Lithuanian naming convention and had consequences for our generated csv!
 
-**Root Cause:** Investigated Faker source code - lt_LT provider has hardcoded format `'{{last_name}}, {{first_name}}'` in formats tuple.
+    - **Root Cause:** Investigated Faker source code - lt_LT provider has hardcoded format `'{{last_name}}, {{first_name}}'` in formats tuple.
 
-**Validation:** Research confirmed Lithuanian names follow `FirstName LastName` format with no commas. The surname-first comma format is not used in Lithuanian naming conventions.
+    - **Validation:** Research confirmed Lithuanian names follow `FirstName LastName` format with no commas. The surname-first comma format is not used in Lithuanian naming conventions.
 
-**Impact:** Affects CSV parsing and data validation testing.
+    - **Impact:** Affects CSV parsing and data validation testing.
 
-**Resolution:** Decided to remove lt_LT from locales after checking there was no unique characters we'd be 
-missing out on (special chars mostly represented in Czech data).
+    - **Resolution:** Decided to remove lt_LT from locales after checking there was no unique characters we'd be missing out on (special chars mostly represented in Czech data).
 
-**Learning:** Even established test data generators can have bugs. Always validate generated data against real-world conventions - and check generated data in file for hidden issues!
+    - **Learning:** Even established test data generators can have bugs. Always validate generated data against real-world conventions - and check generated data in file for hidden issues!
+
+
+## DAY 5
+
+- now we have working versions that include some field validation, and basic versions of fan feed, fan page,
+search function etc.
+
+- we checked everything to make sure basic functionality as expected was working. Due to lack of new 
+features that we can perform manual or automated tests on, we focussed on really nailing down a formal
+spec (draft 1) so that when we come back from the break, there are no question marks and goals are 
+both clearly set, and easily ticked off from both the developers' and test team perspective.
+Kathy drafted up the spec against the dynamic spec questions team document.
+
+- Kathy adapted the Faker test data script prepared so it now reflects what we can now see as an expected location input format through current hard coding. Country data was added to the users dataset generation code, per locale and in the correct user language, and csv regenerated. This means we have more rigorous i18n testing and a full set of test data ready for Selenium automation.
+
+- Ben focussed today on exploring the code base and full backend, uncovering some interesting observations and some concerns to keep an eye on. and did some exploratory testing of the pages, both front and back end to test functionality and earmark potential issues as further things are implemented (eg with image uploading validation). 
+
+- Ben also streamlined the issues-raising team processes; the final week is going to get very busy as a lot more core functionality drops and is pieced together, so with clear labelling etc, efficiency is optimised.
+
+- We explored the testing potential of the tool SonarQube, using the product in its basic current state to practice gathering intel on security, authentication, maintenance, and unit test coverage. We made note of some of the code syntax concerns etc, but will not consider it a priority for devs at this stage. One issue was raised as an enhancement concerning the length of one of the controllers.
+
+- finally we planned all test areas we need to cover after the break, including scenarios and actions to run, tools and data, and method ideas. And a final stand up with the team before 2 weeks off!
+
+
+## WEEK 2
+
