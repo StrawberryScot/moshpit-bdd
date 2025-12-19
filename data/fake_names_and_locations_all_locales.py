@@ -81,7 +81,7 @@ for locale in locales:
         print(country)
         print("")
 
-with open("./names_cities_countries.csv", "a") as f:
+with open("./names_cities_countries.csv", "a", encoding='utf-8') as f:
     for user in users:
         print(user)
         line = f"{user['name']}, {user['city']}, {user['country']}\n"
