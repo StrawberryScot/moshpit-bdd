@@ -64,19 +64,19 @@ FA/AA = Relating to, or representing Action by Fan and Artist (IE 'USER')?
 
 ## FAN ACCOUNT PAGE / PROFILE
 
-- FA - Q: what other information can a fan display on their profile? Bio? Pic?
-- FA - `can a fan link their Spotify account?`
-- FA - `is a fan's top 5 artists displayed on their profile?`
-- FA - Q: can a fan edit their profile after creation?
-- FA - Q: is a fan's profile publicly viewable or private?
-- FA - Q: Can fans see other fans' profiles?
-- FA - Q: Empty states: what if fan has no bio, no profile pic?
+- FA - Q: what other information can a fan display on their profile? Bio? Pic? - Name, Bio, Picture, Location
+- FA - `can a fan link their Spotify account?` - Y (stretch goal)
+- FA - `is a fan's top 5 artists displayed on their profile?` - Y (stretch goal)
+- FA - Q: can a fan edit their profile after creation? - Y
+- FA - Q: is a fan's profile publicly viewable or private? - Public
+- FA - Q: Can fans see other fans' profiles? - Y
+- FA - Q: Empty states: what if fan has no bio, no profile pic? - Name is compulsory, bio and pic is not. Location should be added but doesn't need to be visible? Placeholder image for empty picture. Bio - if not null then it's shown, otherwise the component is hidden. 1500 char limit.
 
-- FA - Q: Can fans search/filter their followed artists?
-- FA - Q: What if fan follows zero artists? (Empty state)
-- FA - Q: are the fan's followed artists displayed on their profile? Where do fans see their list of followed artists?
-- FA - Q: Can fans unfollow from (potential) list of follows or only from artist page?
-- FA - Q: Is there a limit to how many artists you can follow?
+- FA - Q: Can fans search/filter their followed artists? - Y (desired end state, initially we might just show the list of artists w/out search)
+- FA - Q: What if fan follows zero artists? (Empty state) - Message "No artists followed" + provide suggestions for artists to follow based on Spotify
+- FA - Q: are the fan's followed artists displayed on their profile? Where do fans see their list of followed artists? - Y
+- FA - Q: Can fans unfollow from (potential) list of follows or only from artist page? - Y
+- FA - Q: Is there a limit to how many artists you can follow? - N 
 
 ## FAN FEED
 - FA - `Does fan feed show only artists they follow?`
