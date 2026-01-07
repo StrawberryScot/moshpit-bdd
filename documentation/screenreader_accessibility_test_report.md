@@ -4,7 +4,7 @@
 
 At a suitable mid-point in development we have run some exploratory accessibility tests on the app as it stands (pre proper CSS styling, but with core functionality). A focus on screenreader and keyboard navigation is appropriate at this stage, as we do not expect styling to impact greatly on overall element structure. 
 
-It's been valuable to be able to demonstrate to the team of developers how some of the basic principles of accessibility design work in practice, on their own build. The screenshots show exactly what information a user who relies on a screenreader would recieve when navigating through page elements - some examples of good practice seen clearly in action, and some areas we will be flagging as issues on Github to be adapted as a priority.
+It's been valuable to be able to demonstrate to the team of developers how some of the basic principles of accessibility design work in practice, on their own build. The screenshots show exactly what information a user who relies on a screenreader would receive when navigating through page elements - some examples of good practice seen clearly in action, and some areas we will be flagging as issues on Github to be adapted as a priority.
 
 
 ## VOICEOVER Exploratory Test (In-built Mac Screenreader) 
@@ -35,7 +35,7 @@ The screenshot below shows how the message `Found 1 result(s)` appears under *Us
 ![search results screenshot](/issues%20logs%20and%20resources/screenshots_accessibility_intro/screenreader_8.png)
 
 
-### **Navigation Bar `Search` results unneccesary descriptor**
+### **Navigation Bar `Search` results unnecessary descriptor**
 
 Secondary, lower priority issue: `moshpit, web content` is unnecessary text for screenreader.
 
