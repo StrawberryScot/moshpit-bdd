@@ -10,13 +10,12 @@ This Project was the culmination of our 14 week Software Engineering (QE special
 ---
 
 ## README Contents
-- [Project Overview](#project-overview)
-- [Our Role as Quality Engineers](#our-role-as-quality-engineers)
-- [Technical Tools & Stack](#technical-tools--stack)
-- [Key Contributions](#key-contributions)
-- [Testing Approach](#testing-approach)
-- [Key Learnings](#key-learnings)
-- [Standout Achievements](#standout-achievements)
+- [Project Overview](#-project-overview)
+- [Our Role as Quality Engineers](#-our-role-as-quality-engineers)
+- [Technical Tools](#-technical-tools)
+- [Key Contributions](#-key-contributions)
+- [Testing Approach](#-testing-approach)
+- [Standout Achievements](#-standout-achievements)
 
 ---
 
@@ -58,7 +57,7 @@ As the dedicated QE team, we positioned ourselves as **strategic partners in pro
 
 ---
 
-## 🛠️ Technical Tools & Stack
+## 🛠️ Technical Tools
 
 ### Programming & Automation
 - **Python** - Test data generation, automation scripting
